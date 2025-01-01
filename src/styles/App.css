@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.flashcard {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.response-option {
+    display: block;
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.response-option:hover {
+    background-color: #d4d4d4;
+}
+
+.selected {
+    background-color: #a0d3ff;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
