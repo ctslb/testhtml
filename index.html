@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .quiz-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .answer-buttons button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .answer-buttons button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">What is the capital of France?</div>
+        <div class="answer-buttons">
+            <button onclick="checkAnswer(this)">London</button>
+            <button onclick="checkAnswer(this)">Berlin</button>
+            <button onclick="checkAnswer(this)">Paris</button>
+            <button onclick="checkAnswer(this)">Madrid</button>
+        </div>
+        <div class="result"></div>
+    </div>
+
+    <script>
+        function checkAnswer(button) {
+            const correctAnswer = "Paris";
+            const resultDiv = document.querySelector('.result');
+            if (button.textContent === correctAnswer) {
+                resultDiv.textContent = "Correct!";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.textContent = "Incorrect. The correct answer is " + correctAnswer + ".";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
